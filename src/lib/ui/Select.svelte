@@ -199,7 +199,7 @@
 		width: 30px;
 	}
 	.search {
-		background-image: url("/area-explorer-2021-b/img/search.svg");
+		background-image: url("/vars-area-explorer/img/search.svg");
 		width: 30px;
 	}
 	.close {

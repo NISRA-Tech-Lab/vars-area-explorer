@@ -1,7 +1,7 @@
 {
-  "name": "area-explorer-2021-b",
+  "name": "vars-area-explorer",
   "version": "0.0.1",
-  "homepage": "https://nisra-tech-lab.github.io/area-explorer-2021-b/",
+  "homepage": "https://nisra-tech-lab.github.io/vars-area-explorer/",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",

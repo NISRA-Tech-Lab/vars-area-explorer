@@ -401,7 +401,7 @@
 		<div id="grid" class="grid mt">
 			<div class="div-grey-box" style="line-height: 1.3;">
 				<h3 style="margin: 0 0 10px 0; line-height: 1.78;">Overview</h3>
-					The population of {place.name} was  at the time of the 2021 Census.
+					The population of {place.name} was  at the time of the 2021 Census.  {place.name} is a {place.type}.  
 			</div>
 			<div class="div-grey-box">
 				<div
@@ -413,30 +413,47 @@
 					aria-controls="pop-info"
 				>
 					<div class="blocktitle" style="margin: 0; width: 100%">
-						Population <span style="color: gray; font-size: 14pt;"
+						A new topic <span style="color: gray; font-size: 14pt;"
 							>{@html " &#x24D8; "}
 						</span>
 					</div>
 				</div>
 				<div class="collapse" id="pop-info">
 					<div class="card card-body">
-						Population is based on the number of usual residents. A
-						usual resident is anyone who, on 21 March 2021 is in the
-						UK, and staying in the UK for a period of 3 months or
-						more; or has a permanent UK address and is outside the
-						UK and is staying outside the UK for less than 12
-						months. <a
-							href="https://www.nisra.gov.uk/publications/census-2021-main-statistics-for-northern-ireland-phase-1"
-							><strong>Statistical bulletins</strong></a
-						>
+						words.....
 					</div>
 				</div>
 				<span class="text-big" style="font-size: 2.8em;"
-					>Value to be added</span
+					>25,000</span
 				><br />
 
 			</div>
-			
+			<div class="div-grey-box">
+				<div
+					class="row"
+					style="display: flex; cursor: pointer;"
+					data-bs-toggle="collapse"
+					data-bs-target="#pop-info2"
+					aria-expanded="false"
+					aria-controls="pop-info2"
+				>
+					<div class="blocktitle" style="margin: 0; width: 100%">
+						Another topic <span style="color: gray; font-size: 14pt;"
+							>{@html " &#x24D8; "}
+						</span>
+					</div>
+				</div>
+				<div class="collapse" id="pop-info2">
+					<div class="card card-body">
+						words....
+						
+					</div>
+				</div>
+				<span class="text-big" style="font-size: 2.8em;"
+					>15,000</span
+				><br />
+
+			</div>
 		</div>
 
 		<div class="grid mt" bind:clientWidth={w}>
@@ -596,11 +613,7 @@
 					</div>
 					<div class="collapse" id="broadagebands-info">
 						<div class="card card-body">
-							A grouping of ages where a person’s age is their age
-							at their last birthday on or prior to census day. <a
-								href="https://www.nisra.gov.uk/publications/census-2021-main-statistics-for-northern-ireland-phase-1"
-								><strong>Statistical bulletins</strong></a
-							>
+							words....
 						</div>
 					</div>
 
@@ -620,6 +633,72 @@
 						/>
 					</div>
 				</div>
+				<div class="div-grey-box">
+					<div
+						class="row"
+						style="display: flex; cursor: pointer;"
+						data-bs-toggle="collapse"
+						data-bs-target="#broadagebands-info"
+						aria-expanded="false"
+						aria-controls="broadagebands-info"
+					>
+						<div class="blocktitle" style="margin: 0; width: 100%">
+							Broad age bands (years) <span
+								style="color: gray; font-size: 14pt;"
+								>{@html " &#x24D8; "}</span
+							>
+						</div>
+					</div>
+					<div class="collapse" id="broadagebands-info">
+						<div class="card card-body">
+							words....
+						</div>
+					</div>
+					<StackedBarChart
+						data={place && makeData(["age", "perc", "2021"])}
+						zKey={noCompare
+							? null
+							: overtime
+							? "prev"
+							: !overtime && place.type != "ew"
+							? "ew"
+							: null}
+						label={chartLabel}
+					/>
+				</div>	
+				<div class="div-grey-box">
+					<div
+						class="row"
+						style="display: flex; cursor: pointer;"
+						data-bs-toggle="collapse"
+						data-bs-target="#broadagebands-info1"
+						aria-expanded="false"
+						aria-controls="broadagebands-info1"
+					>
+						<div class="blocktitle" style="margin: 0; width: 100%">
+							Broad age bands (years) <span
+								style="color: gray; font-size: 14pt;"
+								>{@html " &#x24D8; "}</span
+							>
+						</div>
+					</div>
+					<div class="collapse" id="broadagebands-info1">
+						<div class="card card-body">
+							words....
+						</div>
+					</div>
+					<StackedBarChart
+						data={place && makeData(["age", "perc", "2021"])}
+						zKey={noCompare
+							? null
+							: overtime
+							? "prev"
+							: !overtime && place.type != "ew"
+							? "ew"
+							: null}
+						label={chartLabel}
+					/>
+				</div>	
 </div>
 		{/if}
 

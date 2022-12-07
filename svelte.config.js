@@ -16,8 +16,8 @@ const config = {
 				entries: []
 		},
 		paths: {
-				assets: production ? 'https://nisra-tech-lab.github.io/area-explorer-2021-b' : '',
-				base: production ? '/area-explorer-2021-b' : ''
+				assets: production ? 'https://nisra-tech-lab.github.io/vars-area-explorer' : '',
+				base: production ? '/vars-area-explorer' : ''
 		},
 		trailingSlash: 'always'
 	}

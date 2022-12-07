@@ -20,7 +20,7 @@ export const urls = {
 	options: 'https://datavis.nisra.gov.uk/techlab/drpvze/places_2001.csv',
 	//places: 'https://datavis.nisra.gov.uk/techlab/yalcbs/',
 	places: '/data_jsons/',
-	base: 'https://nisra-tech-lab.github.io/area-explorer-2021-b/'
+	base: 'https://nisra-tech-lab.github.io/vars-area-explorer/'
 };
 
 export const types = {
