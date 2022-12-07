@@ -413,7 +413,7 @@
 					aria-controls="pop-info"
 				>
 					<div class="blocktitle" style="margin: 0; width: 100%">
-						A new topic <span style="color: gray; font-size: 14pt;"
+						Births <span style="color: gray; font-size: 14pt;"
 							>{@html " &#x24D8; "}
 						</span>
 					</div>
@@ -438,7 +438,7 @@
 					aria-controls="pop-info2"
 				>
 					<div class="blocktitle" style="margin: 0; width: 100%">
-						Another topic <span style="color: gray; font-size: 14pt;"
+						Deaths <span style="color: gray; font-size: 14pt;"
 							>{@html " &#x24D8; "}
 						</span>
 					</div>
@@ -563,7 +563,7 @@
  		<div class="text-bold" style="font-size: 0.85em;">
 			<br />
 			<div class="text-bold" style="font-size: 1.2em;">
-				Select Census 2021 topics:
+				Select vital statistics topics:
 			</div>
 
 			{#if demog == true}

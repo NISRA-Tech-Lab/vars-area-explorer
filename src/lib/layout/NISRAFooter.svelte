@@ -13,26 +13,26 @@
 <div style="margin-left:16px; padding-right:16px;">
 	<h3 style="margin-bottom:10px; line-height: 1.78;">Download</h3>
 	<li style="margin: 0px; display: block; line-height: 20px; padding-bottom: 5px">
-		 <a href="https://www.nisra.gov.uk/publications/census-area-explorer-2021-and-2011-data" class="link"><strong>Download</strong> Census 2011 and 2021 data from this app</a>
+		 <a href="https://www.nisra.gov.uk/publications/census-area-explorer-2021-and-2011-data" class="link"><strong>Download</strong> Vital statistics data from this app</a>
 	</li>
   </div>
   
   <div style="margin-left:16px; padding-right:16px;">
 	<h3 style="margin-bottom:10px; line-height: 1.78;">Contact and further resources</h3>
 	<li style="margin: 0px; display: block; line-height: 20px; padding-bottom: 5px">
-		<a href="https://www.nisra.gov.uk/contacts/census-customer-services">Contact Census</a>
+		<a href="https://www.nisra.gov.uk/contact">Contact NISRA</a>
   	</li>
 	<li style="margin: 0px; display: block; line-height: 20px; padding-bottom: 5px">
-		<a href="https://www.nisra.gov.uk/statistics/census/2021-census">Census 2021</a>
+		<a href="https://www.nisra.gov.uk/statistics/births-deaths-and-marriages">Births, deaths and marriages</a>
   	</li>
 	<li style="margin: 0px; display: block; line-height: 20px; padding-bottom: 5px">
-		<a href="https://www.nisra.gov.uk/statistics/2021-census/results">Census 2021 results</a>
+		<a href="https://www.nisra.gov.uk/statistics/births-deaths-and-marriages/registrar-general-annual-report">Registrar General annual report</a>
   	</li>
 	<li style="margin: 0px; display: block; line-height: 20px; padding-bottom: 5px">
-		<a href="https://www.nisra.gov.uk/publications/census-2021-main-statistics-for-northern-ireland-phase-1">Statistical Bulletins</a>
+		<a href="https://www.ninis2.nisra.gov.uk/public/InteractiveMapTheme.aspx?themeNumber=74&themeName=Population">Interactive population statistics</a>
   	</li>
 	  <li style="margin: 0px; display: block; line-height: 20px; padding-bottom: 5px">
-		<a href="https://www.nisra.gov.uk/publications/census-2021-infographics">Infographics</a>
+		<a href="https://datavis.nisra.gov.uk/vitalStatistics/baby-names-dashboard.html">Baby names app</a>
   	</li>
 	
   </div>

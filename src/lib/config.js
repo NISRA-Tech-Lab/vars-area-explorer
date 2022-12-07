@@ -155,7 +155,7 @@ export const mapPaint = {
 	'fill-self': {
 		'fill-color': [
 			'case',
-			['==', ['feature-state', 'selected'], true], 'rgb(17,140,123)',
+			['==', ['feature-state', 'selected'], true], 'rgb(143,31,129)',
 			'grey'
 		],
 		'fill-opacity': [
@@ -167,7 +167,7 @@ export const mapPaint = {
 	'fill-child': {
 		'fill-color': [
 			'case',
-			['==', ['feature-state', 'highlighted'], true], 'rgb(17,140,123)',
+			['==', ['feature-state', 'highlighted'], true], 'rgb(143,31,129)',
 			'rgba(255,255,255,0)'
 		],
 		'fill-opacity': [
@@ -180,14 +180,14 @@ export const mapPaint = {
 	'line-active': {
 		'line-color': [
 			'case',
-			['==', ['feature-state', 'selected'], true], 'rgb(17,140,123)',
+			['==', ['feature-state', 'selected'], true], 'rgb(143,31,129)',
 			'grey'
 		],
 		'line-width': 2,
 		'line-opacity': 1
 	},
 	'line-self': {
-		'line-color': 'rgb(17,140,123)',
+		'line-color': 'rgb(143,31,129)',
 		'line-width': 2,
 		'line-opacity': [
 			'case',
@@ -196,7 +196,7 @@ export const mapPaint = {
 		]
 	},
 	'line-child': {
-		'line-color': 'rgb(17,140,123)',
+		'line-color': 'rgb(143,31,129)',
 		'line-width': 1,
 		'line-opacity': [
 			'case',

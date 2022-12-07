@@ -23,11 +23,11 @@
 			<a href="https://www.nisra.gov.uk/statistics/census">
 				<picture style="float: right; top: 0px;">
 					{#if theme.name == 'dark'}
-					<img src="{assets}/img/census-2021-logo-white.svg" alt="Census 2021">
+					<img src="{assets}/img/vars-logo-white.png" alt="NISRA vital statistics logo">
 					{:else if filled == true}
-					<img src="{assets}/img/census-2021-logo-colour.svg" alt="Census 2021">
+					<img src="{assets}/img/vars-logo-navy.png" alt="NISRA vital statistics logo">
 					{:else}
-					<img src="{assets}/img/census-2021-logo-colour.svg" alt="Census 2021">
+					<img src="{assets}/img/vars-logo-navy.png" alt="NISRA vital statistics logo">
 					{/if}
 				</picture>
 			</a>	
