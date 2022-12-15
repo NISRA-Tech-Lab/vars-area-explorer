@@ -37,11 +37,72 @@ export const types = {
 };
 
 export const codes = {
-	age: [
-		{ code: 'a0to14', label: '0-14' },
-		{ code: 'a15to39', label: '15-39' },
-		{ code: 'a40to64', label: '40-64' },
-		{ code: 'a65plus', label: '65+' }
+	births: [
+		{ code: 'female', label: 'Female' },
+		{ code: 'male', label: 'Male' }
+	],
+	birth_month: [
+		{ code: 'january', label: '01' },
+		{ code: 'february', label: '02' },
+		{ code: 'march', label: '03' },
+		{ code: 'april', label: '04' },
+		{ code: 'may', label: '05' },
+		{ code: 'june', label: '06' },
+		{ code: 'july', label: '07' },
+		{ code: 'august', label: '08' },
+		{ code: 'september', label: '09' },
+		{ code: 'october', label: '10' },
+		{ code: 'november', label: '11' },
+		{ code: 'december', label: '12'}
+	],
+	place_of_death: [
+		{ code: 'hospital', label: 'Hospital' },
+		{ code: 'care_nursing_home', label: 'Care home' },
+		{ code: 'home', label: 'At home' },
+		{ code: 'hospice', label: 'Hospice' },
+		{ code: 'other', label: 'Other'}
+	] ,
+	age_at_death: [
+		{ code: 'a1_to_15', label: '1-15' },
+		{ code: 'a16_to_64', label: '16-64' },
+		{ code: 'a65_plus', label: '65 plus' }
+	],
+	cause_of_death: [
+		{ code: 'cancer', label: 'Cancer' },
+		{ code: 'circulatory_diseases', label: 'Circulatory diseases' },
+		{ code: 'respiratory_diseases', label: 'Respiratory diseases' },
+		{ code: 'external_causes', label: 'External causes' },
+		{ code: 'other', label: 'Other' }
+	],
+	place_of_death: [
+		{ code: 'hospital', label: 'Hospital' },
+		{ code: 'care_nursing_home', label: 'Care home' },
+		{ code: 'home', label: 'At home' },
+		{ code: 'hospice', label: 'Hospice' },
+		{ code: 'other', label: 'Other'}
+	],
+	marriage_month: [
+		{ code: 'january', label: '01' },
+		{ code: 'february', label: '02' },
+		{ code: 'march', label: '03' },
+		{ code: 'april', label: '04' },
+		{ code: 'may', label: '05' },
+		{ code: 'june', label: '06' },
+		{ code: 'july', label: '07' },
+		{ code: 'august', label: '08' },
+		{ code: 'september', label: '09' },
+		{ code: 'october', label: '10' },
+		{ code: 'november', label: '11' },
+		{ code: 'december', label: '12'}
+	],
+	place_of_marriage: [
+		{ code: 'approved_venue', label: 'Approved venue' },
+		{ code: 'church', label: 'Church' },
+		{ code: 'registry_office', label: 'Registry office' }
+	],
+	ave_age_at_marriage: [
+		{ code: 'female', label: 'Female' },
+		{ code: 'male', label: 'Male' }
 	]
 
 };

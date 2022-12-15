@@ -86,9 +86,9 @@
 		let code = props[0];
 		let val = props[1];
 
-		let source = place.data[code][val]["2021"];
-		let sourcePrev = place.data[code][val]["2011"];
-		let sourceEW = ew.data[code][val]["2021"];
+		let source = place.data[code][val]["2020"];
+		let sourcePrev = place.data[code][val]["2010"];
+		let sourceEW = ew.data[code][val]["2020"];
 
 		let keys = codes[code].map((d) => d.code);
 		let labels = codes[code].map((d) => (d.label ? d.label : d.code));
@@ -237,9 +237,9 @@
 
 	$: w && onResize();
 	$: chartLabel = overtime
-		? "Same area 2011"
+		? "Same area 2010"
 		: place && place.parents[0]
-		? "NI 2021"
+		? "NI 2020"
 		: null;
 	$: place && update(place);
 	//	$: hasChange = place && place.data.population.value.change.all != null;
@@ -302,7 +302,7 @@
 							on:click={() => (hasChange = true)}
 							on:click={() => (noCompare = false)}
 							on:click={() => (overtime = false)}
-							>NI 2021</button>
+							>NI 2020</button>
 					{/if}
 					<button
 						class="btn"
@@ -310,7 +310,7 @@
 						on:click={() => (overtime = true)}
 						on:click={() => (noCompare = false)}
 						on:click={() => (hasChange = false)}
-						>Same area 2011</button
+						>Same area 2010</button
 					>
 				</div>
 			</div>
@@ -531,7 +531,7 @@
 						{/each}
 					</MapSource>
 				</Map>
-			</div>
+			</div> 
 			<div>
 				<span class="text-bold">Parents of {place.name}</span><br/>
 				<span class="text-small">
@@ -600,20 +600,20 @@
 						class="row"
 						style="display: flex; cursor: pointer;"
 						data-bs-toggle="collapse"
-						data-bs-target="#broadagebands-info"
+						data-bs-target="#births-info"
 						aria-expanded="false"
-						aria-controls="broadagebands-info"
+						aria-controls="births-info"
 					>
 						<div class="blocktitle" style="margin: 0; width: 100%">
-							Broad age bands (years) <span
+							Births by sex <span
 								style="color: gray; font-size: 14pt;"
 								>{@html " &#x24D8; "}</span
 							>
 						</div>
 					</div>
-					<div class="collapse" id="broadagebands-info">
+					<div class="collapse" id="births-info">
 						<div class="card card-body">
-							words....
+							words about births
 						</div>
 					</div>
 
@@ -622,7 +622,7 @@
 						style="height: 100px; padding-bottom: 5px"
 					>
 						<ColChart
-							data={place && makeData(["age", "perc", "2021"])}
+							data={place && makeData(["births", "perc", "2020"])}
 							zKey={noCompare
 								? null
 								: overtime
@@ -631,31 +631,181 @@
 								? "ew"
 								: null}
 						/>
-					</div>
+					</div>	
 				</div>
 				<div class="div-grey-box">
 					<div
 						class="row"
 						style="display: flex; cursor: pointer;"
 						data-bs-toggle="collapse"
-						data-bs-target="#broadagebands-info"
+						data-bs-target="#birthmonth-info"
 						aria-expanded="false"
-						aria-controls="broadagebands-info"
+						aria-controls="birthmonth-info"
 					>
 						<div class="blocktitle" style="margin: 0; width: 100%">
-							Broad age bands (years) <span
+							Births by month <span
 								style="color: gray; font-size: 14pt;"
 								>{@html " &#x24D8; "}</span
 							>
 						</div>
 					</div>
-					<div class="collapse" id="broadagebands-info">
+					<div class="collapse" id="birthmonth-info">
 						<div class="card card-body">
-							words....
+							words about birth months
+						</div>
+					</div>
+					<div
+					class="chart"
+					style="height: 100px; padding-bottom: 5px"
+					>
+						<ColChart
+							data={place && makeData(["birth_month", "perc", "2020"])}
+							zKey={noCompare
+								? null
+								: overtime
+								? "prev"
+								: !overtime && place.type != "ew"
+								? "ew"
+								: null}
+							label={chartLabel}
+						/>
+					</div>						
+				</div>
+
+				<div class="div-grey-box">
+					<div
+						class="row"
+						style="display: flex; cursor: pointer;"
+						data-bs-toggle="collapse"
+						data-bs-target="#birthplace-info"
+						aria-expanded="false"
+						aria-controls="birthplace-info"
+					>
+						<div class="blocktitle" style="margin: 0; width: 100%">
+							Place of birth <span
+								style="color: gray; font-size: 14pt;"
+								>{@html " &#x24D8; "}</span
+							>
+						</div>
+					</div>
+					<div class="collapse" id="birthplace-info">
+						<div class="card card-body">
+							words about place of birth
+						</div>
+					</div>
+					<!-- <div
+					class="chart"
+					style="height: 100px; padding-bottom: 5px"
+					> -->
+					<StackedBarChart
+						data={place && makeData(["place_of_death", "perc", "2020"])}
+						zKey={noCompare
+							? null
+							: overtime
+							? "prev"
+							: !overtime && place.type != "ew"
+							? "ew"
+							: null}
+						label={chartLabel}
+					/>
+					</div>						
+
+
+				<div class="div-grey-box">
+					<div
+						class="row"
+						style="display: flex; cursor: pointer;"
+						data-bs-toggle="collapse"
+						data-bs-target="#causeofdeath-info"
+						aria-expanded="false"
+						aria-controls="causeofdeath-info"
+					>
+						<div class="blocktitle" style="margin: 0; width: 100%">
+							Cause of death <span
+								style="color: gray; font-size: 14pt;"
+								>{@html " &#x24D8; "}</span
+							>
+						</div>
+					</div>
+					<div class="collapse" id="causeofdeath-info">
+						<div class="card card-body">
+							words about cause of death
 						</div>
 					</div>
 					<StackedBarChart
-						data={place && makeData(["age", "perc", "2021"])}
+						data={place && makeData(["cause_of_death", "perc", "2020"])}
+						zKey={noCompare
+							? null
+							: overtime
+							? "prev"
+							: !overtime && place.type != "ew"
+							? "ew"
+							: null}
+						label={chartLabel}
+					/>
+				</div>
+				<div class="div-grey-box">
+					<div
+						class="row"
+						style="display: flex; cursor: pointer;"
+						data-bs-toggle="collapse"
+						data-bs-target="#ageatdeath-info"
+						aria-expanded="false"
+						aria-controls="ageatdeath-info"
+					>
+						<div class="blocktitle" style="margin: 0; width: 100%">
+							Age at death (years) <span
+								style="color: gray; font-size: 14pt;"
+								>{@html " &#x24D8; "}</span
+							>
+						</div>
+					</div>
+					<div class="collapse" id="ageatdeath-info">
+						<div class="card card-body">
+							words for age at death
+						</div>
+					</div>
+					<div
+					class="chart"
+					style="height: 100px; padding-bottom: 5px"
+					>
+						<ColChart
+							data={place && makeData(["age_at_death", "perc", "2020"])}
+							zKey={noCompare
+								? null
+								: overtime
+								? "prev"
+								: !overtime && place.type != "ew"
+								? "ew"
+								: null}
+							label={chartLabel}
+						/>
+					</div>	
+				</div>	
+					
+				<div class="div-grey-box">
+					<div
+						class="row"
+						style="display: flex; cursor: pointer;"
+						data-bs-toggle="collapse"
+						data-bs-target="#placeofdeath-info"
+						aria-expanded="false"
+						aria-controls="placeofdeath-info"
+					>
+						<div class="blocktitle" style="margin: 0; width: 100%">
+							Place of death <span
+								style="color: gray; font-size: 14pt;"
+								>{@html " &#x24D8; "}</span
+							>
+						</div>
+					</div>
+					<div class="collapse" id="placeofdeath-info">
+						<div class="card card-body">
+							words for place of death
+						</div>
+					</div>
+					<StackedBarChart
+						data={place && makeData(["place_of_death", "perc", "2020"])}
 						zKey={noCompare
 							? null
 							: overtime
@@ -666,29 +816,69 @@
 						label={chartLabel}
 					/>
 				</div>	
+
 				<div class="div-grey-box">
 					<div
 						class="row"
 						style="display: flex; cursor: pointer;"
 						data-bs-toggle="collapse"
-						data-bs-target="#broadagebands-info1"
+						data-bs-target="#marriagemonth-info"
 						aria-expanded="false"
-						aria-controls="broadagebands-info1"
+						aria-controls="marriagemonth-info"
 					>
 						<div class="blocktitle" style="margin: 0; width: 100%">
-							Broad age bands (years) <span
+							Marriages by month <span
 								style="color: gray; font-size: 14pt;"
 								>{@html " &#x24D8; "}</span
 							>
 						</div>
 					</div>
-					<div class="collapse" id="broadagebands-info1">
+					<div class="collapse" id="marriagemonth-info">
 						<div class="card card-body">
-							words....
+							words about marriage months
+						</div>
+					</div>
+					<div
+					class="chart"
+					style="height: 100px; padding-bottom: 5px"
+					>
+						<ColChart
+							data={place && makeData(["marriage_month", "perc", "2020"])}
+							zKey={noCompare
+								? null
+								: overtime
+								? "prev"
+								: !overtime && place.type != "ew"
+								? "ew"
+								: null}
+							label={chartLabel}
+						/>
+					</div>						
+				</div>
+
+				<div class="div-grey-box">
+					<div
+						class="row"
+						style="display: flex; cursor: pointer;"
+						data-bs-toggle="collapse"
+						data-bs-target="#placeofmarriage-info"
+						aria-expanded="false"
+						aria-controls="placeofmarriage-info"
+					>
+						<div class="blocktitle" style="margin: 0; width: 100%">
+							Place of marriage <span
+								style="color: gray; font-size: 14pt;"
+								>{@html " &#x24D8; "}</span
+							>
+						</div>
+					</div>
+					<div class="collapse" id="placeofmarriage-info">
+						<div class="card card-body">
+							words for place of marriage
 						</div>
 					</div>
 					<StackedBarChart
-						data={place && makeData(["age", "perc", "2021"])}
+						data={place && makeData(["place_of_marriage", "perc", "2020"])}
 						zKey={noCompare
 							? null
 							: overtime
@@ -698,6 +888,45 @@
 							: null}
 						label={chartLabel}
 					/>
+				</div>	
+
+				<div class="div-grey-box">
+					<div
+						class="row"
+						style="display: flex; cursor: pointer;"
+						data-bs-toggle="collapse"
+						data-bs-target="#ageatmarriage-info"
+						aria-expanded="false"
+						aria-controls="ageatmarriage-info"
+					>
+						<div class="blocktitle" style="margin: 0; width: 100%">
+							Average age at marriage (years) <span
+								style="color: gray; font-size: 14pt;"
+								>{@html " &#x24D8; "}</span
+							>
+						</div>
+					</div>
+					<div class="collapse" id="ageatmarriage-info">
+						<div class="card card-body">
+							words for age at marriage
+						</div>
+					</div>
+					<div
+					class="chart"
+					style="height: 100px; padding-bottom: 5px"
+					>
+						<ColChart
+							data={place && makeData(["ave_age_at_marriage", "perc", "2020"])}
+							zKey={noCompare
+								? null
+								: overtime
+								? "prev"
+								: !overtime && place.type != "ew"
+								? "ew"
+								: null}
+							label={chartLabel}
+						/>
+					</div>	
 				</div>	
 </div>
 		{/if}
