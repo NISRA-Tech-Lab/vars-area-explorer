@@ -29,9 +29,9 @@ export const types = {
 	lgd: { name: 'Local Government District', pl: 'Districts' },
 	ward: { name: 'Electoral Ward', pl: 'Ward' },
 	postcode: { name: 'postcode', pl: 'postcode' },
-	ctry: { name: 'Country', pl: 'Countries' },
+	ctry: { name: 'Country', pl: 'Countries' }//,
 
-	ew: { name: 'England and Wales', pl: 'Northern Ireland' }
+//	ew: { name: 'England and Wales', pl: 'Northern Ireland' }
 	/* 	,
 		dz: {name: 'DataZones', pl: 'DataZones'},
 		sdz: {name: 'Super Data Zones', pl: 'Super Data Zones'}

@@ -401,7 +401,11 @@
 		<div id="grid" class="grid mt">
 			<div class="div-grey-box" style="line-height: 1.3;">
 				<h3 style="margin: 0 0 10px 0; line-height: 1.78;">Overview</h3>
-					The population of {place.name} was 25,000 in 2020.  {place.name} is a {types[place.type].name.toLowerCase()}.  
+					The population of {place.name} was 25,000 in 2020.  
+					{#if place.type != "ew"}
+					{place.name} is a {types[place.type].name.toLowerCase()}.  
+					{/if}
+				
 			</div>
 			<div class="div-grey-box">
 				<div
