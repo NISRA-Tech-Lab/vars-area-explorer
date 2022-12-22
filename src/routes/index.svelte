@@ -21,7 +21,7 @@
 <Section column="wide">
   <div class="block">
     <span class="text-big title">Area Explorer</span>
-    <p>Select Northern Ireland or a Local Government District to start exploring Census 2021 data</p>
+    <p>Select Northern Ireland or a Local Government District to start exploring vital statistics data</p>
     <ul>
       <li><a href="{base}/N92000002"><strong>Northern Ireland</strong></a></li>
       <ul>
@@ -42,8 +42,8 @@
 
 
   </div>
-  <div>This application contains data for Northern Ireland and the 11 Local Government Districts.  
-    It will be updated with more topics and lower geographies as they are released.  
+  <div>This application contains data for Northern Ireland, the 11 Local Government Districts and their smaller geographies:  
+    DEAs (district electoral areas) and wards.  
   </div>
 </Section>
 

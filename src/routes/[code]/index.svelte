@@ -246,7 +246,7 @@
 	$: hasChange = false;
 	$: noCompare = true;
 
-	$: demog = true;
+
 </script>
 
 <svelte:head>
@@ -401,7 +401,7 @@
 		<div id="grid" class="grid mt">
 			<div class="div-grey-box" style="line-height: 1.3;">
 				<h3 style="margin: 0 0 10px 0; line-height: 1.78;">Overview</h3>
-					The population of {place.name} was  at the time of the 2021 Census.  {place.name} is a {place.type}.  
+					The population of {place.name} was 25,000 in 2020.  {place.name} is a {types[place.type].name.toLowerCase()}.  
 			</div>
 			<div class="div-grey-box">
 				<div
@@ -424,7 +424,7 @@
 					</div>
 				</div>
 				<span class="text-big" style="font-size: 2.8em;"
-					>25,000</span
+					>{place.data.births.value['2020'].toLocaleString()}</span
 				><br />
 
 			</div>
@@ -450,7 +450,7 @@
 					</div>
 				</div>
 				<span class="text-big" style="font-size: 2.8em;"
-					>15,000</span
+					>{place.data.deaths.value['2020'].toLocaleString()}</span
 				><br />
 
 			</div>
@@ -458,7 +458,8 @@
 
 		<div class="grid mt" bind:clientWidth={w}>
 			<div style="grid-column: span {cols};">
-				<h3>Explore <span style="color: #93328E">{place.name} </span></h3>
+				<h3>You are currently viewing: <span style="color: #93328E">{place.name} </span></h3>
+				<br>View other area statistics by clicking on the map below or using the menu on the right.
 			</div>
 			<div id="map" style="padding-right: 45px; grid-column: span {cols == 2 ? 2 : cols && cols > 2 ? cols - 1 : 1};  ">
 				<Map bind:map location={{bounds: place.bounds}} options={{fitBoundsOptions: {padding: 20}}} style={mapStyle}>
@@ -560,37 +561,14 @@
 
 
 
- 		<div class="text-bold" style="font-size: 0.85em;">
-			<br />
-			<div class="text-bold" style="font-size: 1.2em;">
-				Select vital statistics topics:
-			</div>
-
-			{#if demog == true}
-				<button
-					class="btn"
-					class:btn-active={demog}
-					on:click={() => (demog = false)}
-					>Demography <sup>x</sup> </button>
-			{:else}
-				<button
-					class="btn"
-					class:btn-active={demog}
-					on:click={() => (demog = true)}>Demography </button>
-			{/if}
-
-			<br />
-			<br />
-
-		</div> 
-
+ 		
 
 	
-		{#if demog}
+		
 			<div style="grid-column: span {cols};">
 				<h2>
-					Demography <span class="title-inset muted"
-						>{place.name} - Census 2021</span
+					Births <span class="title-inset muted"
+						>{place.name} 2020</span
 					>
 				</h2>
 			</div>
@@ -682,7 +660,7 @@
 						aria-controls="birthplace-info"
 					>
 						<div class="blocktitle" style="margin: 0; width: 100%">
-							Place of birth <span
+							Places of birth <span
 								style="color: gray; font-size: 14pt;"
 								>{@html " &#x24D8; "}</span
 							>
@@ -710,7 +688,14 @@
 					/>
 					</div>						
 
-
+				<div style="grid-column: span {cols};">
+					<h2>
+						Deaths <span class="title-inset muted"
+							>{place.name} 2020</span
+							>
+					</h2>
+				</div>
+				
 				<div class="div-grey-box">
 					<div
 						class="row"
@@ -815,7 +800,15 @@
 							: null}
 						label={chartLabel}
 					/>
-				</div>	
+				</div>
+				
+				<div style="grid-column: span {cols};">
+					<h2>
+						Marriages <span class="title-inset muted"
+							>{place.name} 2020</span
+							>
+					</h2>
+				</div>
 
 				<div class="div-grey-box">
 					<div
@@ -929,7 +922,7 @@
 					</div>	
 				</div>	
 </div>
-		{/if}
+		
 
 	
 

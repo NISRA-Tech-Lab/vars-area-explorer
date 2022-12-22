@@ -18,8 +18,8 @@ export const themes = {
 
 export const urls = {
 	options: 'https://datavis.nisra.gov.uk/techlab/drpvze/places_2001.csv',
-	//places: 'https://datavis.nisra.gov.uk/techlab/yalcbs/',
-	places: '/data_jsons/',
+	places: 'https://datavis.nisra.gov.uk/techlab/hmmgbq/',
+	// places: '/data_jsons/',
 	base: 'https://nisra-tech-lab.github.io/vars-area-explorer/'
 };
 
@@ -116,14 +116,14 @@ export const mapSources = {
 		id: 'lgd',
 		promoteId: 'LGDCode',
 		type: 'vector',
-		url: 'https://raw.githubusercontent.com/NISRA-Tech-Lab/map_tiles/main/lgd2014/{z}/{x}/{y}.pbf',
+		url: 'https://raw.githubusercontent.com/NISRA-explore/map_tiles/main/lgd2014/{z}/{x}/{y}.pbf',
 		maxzoom: 12
 	},
 	dea: {
 		id: 'dea',
 		promoteId: 'DEA_code',
 		type: 'vector',
-		url: 'https://raw.githubusercontent.com/NISRA-Tech-Lab/map_tiles/main/dea_2014/{z}/{x}/{y}.pbf',
+		url: 'https://raw.githubusercontent.com/NISRA-explore/map_tiles/main/dea_2014/{z}/{x}/{y}.pbf',
 		minzoom: 6,
 		maxzoom: 12
 	} ,
@@ -131,7 +131,7 @@ export const mapSources = {
 		id: 'ward',
 		promoteId: 'Ward_Code',
 		type: 'vector',
-		url: 'https://raw.githubusercontent.com/NISRA-Tech-Lab/map_tiles/main/ward2014/{z}/{x}/{y}.pbf',
+		url: 'https://raw.githubusercontent.com/NISRA-explore/map_tiles/main/ward2014/{z}/{x}/{y}.pbf',
 		minzoom: 6,
 		maxzoom: 12
 	} 
