@@ -24,12 +24,12 @@ export const urls = {
 };
 
 export const types = {
-	dea: { name: 'District Electoral Area', pl: 'District Electoral Areas' },
-	town: { name: 'settlement', pl: 'Settlement' },
-	lgd: { name: 'Local Government District', pl: 'Districts' },
-	ward: { name: 'Electoral Ward', pl: 'Ward' },
-	postcode: { name: 'postcode', pl: 'postcode' },
-	ctry: { name: 'Country', pl: 'Countries' }//,
+	dea: { name: 'a district Electoral Area', pl: 'District Electoral Areas' },
+	town: { name: 'a settlement', pl: 'Settlement' },
+	lgd: { name: 'a Local Government District', pl: 'Districts' },
+	ward: { name: 'an Electoral Ward', pl: 'Ward' },
+	postcode: { name: 'a postcode', pl: 'postcode' },
+	ctry: { name: 'a Country', pl: 'Countries' }//,
 
 //	ew: { name: 'England and Wales', pl: 'Northern Ireland' }
 	/* 	,

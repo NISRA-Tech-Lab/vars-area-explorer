@@ -403,7 +403,7 @@
 				<h3 style="margin: 0 0 10px 0; line-height: 1.78;">Overview</h3>
 					The population of {place.name} was 25,000 in 2020.  
 					{#if place.type != "ew"}
-					{place.name} is a {types[place.type].name.toLowerCase()}.  
+					{place.name} is {types[place.type].name.toLowerCase()}.  
 					{/if}
 				
 			</div>
